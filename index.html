@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <div>输入不带品牌的产品编号 : <input id='itemcode' onchange='oeTextChange()'/></div>
+        <div style="width:30%;display: inline-block;">
+            国内B2B
+            <div><img id="gnb2b" src="https://b2b.vikadpa.com/images/no_img_v.png" style="width:100%;max-height: 100%;" οnerrοr="this.src='//b2b.vikadpa.com/images/no_img_v.png';"/></div>
+        </div>
+        <div style="width:30%;display: inline-block;">
+            国际vikadpa
+            <div><img id="vikadpa" src="https://shop.vikadpa.com/images/no_img_v.png" style="width:100%;" οnerrοr="this.src='//shop.vikadpa.com/images/no_img_v.png';"/></div>
+        </div>
+        <div style="width:30%;display: inline-block;">
+            国际borsehung
+            <div><img id="borsehung" src="https://shop.borsehung.de/images/no-img.png" style="width:100%;" οnerrοr="this.src='//shop.borsehung.de/images/no-img.png';"/></div>
+        </div>
+
+        <script>
+            function oeTextChange(){
+                var oeNewText = document.getElementById('itemcode').value;
+                document.getElementById("gnb2b").src="https://b2b.vikadpa.com/img/"+ oeNewText +".jpg?v="+Math.random();  
+                document.getElementById("vikadpa").src="https://catalogue.vikadpa.com/images/vikadpa/"+ oeNewText +".jpg?v="+Math.random();  
+                document.getElementById("borsehung").src="https://parts.borsehung.de/Images/Product/"+ oeNewText +".jpg?v="+Math.random();  
+            }
+        </script>
+    </body>
+</html>
